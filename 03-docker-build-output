@@ -1,0 +1,36 @@
+home/project/zntwk-tax_calculator$ docker build -t tax-calculator .
+[+] Building 14.1s (11/11) FINISHED docker:default
+ => [internal] load build definition from Do  0.0s
+ => => transferring dockerfile: 305B          0.0s
+ => [internal] load metadata for docker.io/l  1.4s
+ => [internal] load .dockerignore             0.0s
+ => => transferring context: 2B               0.0s
+ => [1/6] FROM docker.io/library/nginx:lates  9.6s
+ => => resolve docker.io/library/nginx:lates  0.0s
+ => => sha256:c85f13d520611b 2.29kB / 2.29kB  0.0s
+ => => sha256:72c03230f136 29.79MB / 29.79MB  4.8s
+ => => sha256:eaf6f386053efd 9.09kB / 9.09kB  0.0s
+ => => sha256:8da80f8205ea 33.32MB / 33.32MB  6.7s
+ => => sha256:ac5e3151b8c01ba130 628B / 628B  0.3s
+ => => sha256:3461bb3286189e9b12 956B / 956B  0.7s
+ => => sha256:99181f19640fe66e1b 404B / 404B  1.0s
+ => => sha256:868d78dceaedba 1.21kB / 1.21kB  1.4s
+ => => sha256:c82e83b01f69cc 1.40kB / 1.40kB  1.7s
+ => => extracting sha256:72c03230f1363a3fb61  2.8s
+ => => extracting sha256:8da80f8205ea29005f2  1.5s
+ => => extracting sha256:ac5e3151b8c01ba1306  0.0s
+ => => extracting sha256:3461bb3286189e9b128  0.0s
+ => => extracting sha256:99181f19640fe66e1bd  0.0s
+ => => extracting sha256:868d78dceaedbae0f32  0.0s
+ => => extracting sha256:c82e83b01f69cc20dce  0.0s
+ => [internal] load build context             0.0s
+ => => transferring context: 23.84kB          0.0s
+ => [2/6] COPY favicon.ico /usr/share/nginx/  2.7s
+ => [3/6] COPY index.html /usr/share/nginx/h  0.0s
+ => [4/6] COPY script.js /usr/share/nginx/ht  0.0s
+ => [5/6] COPY style.css /usr/share/nginx/ht  0.0s
+ => [6/6] COPY taxCalculator.js /usr/share/n  0.0s
+ => exporting to image                        0.1s
+ => => exporting layers                       0.1s
+ => => writing image sha256:2ad5298369d2bc97  0.0s
+ => => naming to docker.io/library/tax-calcu  0.0s

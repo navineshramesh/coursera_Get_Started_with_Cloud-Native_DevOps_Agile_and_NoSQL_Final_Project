@@ -1,0 +1,80 @@
+/home/project/zntwk-tax_calculator$ ibmcloud ce application create --name zntwk-tax-calculator --image us.icr.io/${SN_ICR_NAMESPACE}/zntwk-tax-calculator --registry-secret icr-secret --port 80
+Creating application 'zntwk-tax-calculator'...
+The Route is still working to reflect the latest desired specification.
+Configuration 'zntwk-tax-calculator' is waiting for a Revision to become ready.
+Ingress has not yet been reconciled.
+Waiting for load balancer to be ready.
+Run 'ibmcloud ce application get -n zntwk-tax-calculator' to check the application status.
+OK
+
+https://zntwk-tax-calculator.2bisiwgtz3bd.us-south.codeengine.appdomain.cloud
+theia@theiaopenshift-navineshmail:/home/project/zntwk-tax_calculator$ 
+theia@theiaopenshift-navineshmail:/home/project/zntwk-tax_calculator$ ibmcloud ce application get --name zntwk-tax-calculator
+OK
+
+Name:               zntwk-tax-calculator  
+ID:                 d19f3647-c76a-47b8-8748-dd790448db7e  
+Project Name:       Code Engine - sn-labs-navineshmail  
+Project ID:         1b02684c-30c9-4916-9ef9-26787843a25a  
+Age:                50s  
+Created:            2026-06-24T16:48:19-04:00  
+URL:                https://zntwk-tax-calculator.2bisiwgtz3bd.us-south.codeengine.appdomain.cloud  
+Cluster Local URL:  http://zntwk-tax-calculator.2bisiwgtz3bd.svc.cluster.local  
+Console URL:        https://cloud.ibm.com/codeengine/project/us-south/1b02684c-30c9-4916-9ef9-26787843a25a/application/zntwk-tax-calculator/configuration  
+Status Summary:     Application deployed successfully  
+
+Environment Variables:    
+  Type     Name             Value  
+  Literal  CE_API_BASE_URL  https://api.private.us-south.codeengine.cloud.ibm.com  
+  Literal  CE_APP           zntwk-tax-calculator  
+  Literal  CE_DOMAIN        us-south.codeengine.appdomain.cloud  
+  Literal  CE_PROJECT_ID    1b02684c-30c9-4916-9ef9-26787843a25a  
+  Literal  CE_REGION        us-south  
+  Literal  CE_SUBDOMAIN     2bisiwgtz3bd  
+Image:                  us.icr.io/sn-labs-navineshmail/zntwk-tax-calculator  
+Resource Allocation:      
+  CPU:                1  
+  Ephemeral Storage:  400M  
+  Memory:             4G  
+Registry Secrets:         
+  icr-secret  
+Port:                   80  
+
+Revisions:          
+  zntwk-tax-calculator-00001:    
+    Age:                50s  
+    Latest:             true  
+    Traffic:            100%  
+    Image:              us.icr.io/sn-labs-navineshmail/zntwk-tax-calculator (pinned to 2f82d8)  
+    Running Instances:  1  
+
+Runtime:            
+  Concurrency:       100  
+  Maximum Scale:     10  
+  Minimum Scale:     0  
+  Scale Down Delay:  0  
+  Timeout:           300  
+  Trusted profiles:  disabled  
+
+Readiness Probe:    
+  Type:  tcp  
+  Port:  0 (use listening port)  
+
+Conditions:         
+  Type                 OK    Age  Reason  
+  ConfigurationsReady  true  38s    
+  Ready                true  31s    
+  RoutesReady          true  31s    
+
+Events:             
+  Type    Reason   Age  Source              Messages  
+  Normal  Created  51s  service-controller  Created Configuration "zntwk-tax-calculator"  
+  Normal  Created  51s  service-controller  Created Route "zntwk-tax-calculator"  
+
+Instances:          
+  Name                                                    Revision                    Running  Status   Restarts  Age  
+  zntwk-tax-calculator-00001-deployment-5486bf7694-bqbtv  zntwk-tax-calculator-00001  3/3      Running  0         50s  
+
+For troubleshooting information visit: https://cloud.ibm.com/docs/codeengine?topic=codeengine-troubleshoot-apps.
+Run 'ibmcloud ce application events -n zntwk-tax-calculator' to get the system events of the application instances.
+Run 'ibmcloud ce application logs -f -n zntwk-tax-calculator' to follow the logs of the application instances.

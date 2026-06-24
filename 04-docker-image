@@ -1,0 +1,4 @@
+:/home/project/zntwk-tax_calculato
+r$ docker run -it -d -p 8080:80
+ tax-calculator
+d0b70e88e689ede0e497302b7c757b85735a599c413b3b73c56bee0150f76d89
